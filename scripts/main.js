@@ -228,6 +228,24 @@
     });
   });
 
+  // ── CLICKABLE SKU CARDS ─────────────────────────────────────
+  document.querySelectorAll('.sku-card').forEach(card => {
+    const link = card.querySelector('.btn-sku');
+    if (link) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', (e) => {
+        // If clicked element is already a link or button (or inside one), do nothing
+        if (e.target.closest('a') || e.target.closest('button')) {
+          return;
+        }
+        const href = link.getAttribute('href');
+        if (href) {
+          window.location.href = href;
+        }
+      });
+    }
+  });
+
   // ── VIDEO PLAY BUTTON ──────────────────────────────────────
   const playBtn = document.getElementById('play-btn');
   if (playBtn) {
