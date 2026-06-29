@@ -883,6 +883,40 @@ section { padding: var(--section-gap) 0; position: relative; }
   box-shadow: 0 8px 30px rgba(82, 183, 136, 0.2);
 }
 
+
+.form-consent {
+  margin: 16px 0;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 12px;
+}
+.consent-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+.consent-row input[type="checkbox"] {
+  margin-top: 3px;
+  cursor: pointer;
+  accent-color: var(--jade-glow);
+}
+.consent-text {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.consent-text a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.consent-text a:hover {
+  color: var(--jade-glow);
+}
+
 .form-note {
   text-align: center;
   font-size: 0.75rem;
